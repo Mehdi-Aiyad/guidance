@@ -4,8 +4,8 @@ from ._openai import OpenAI, prompt_to_messages, add_text_to_chat_mode
 import litellm
 
 class LiteLLM(OpenAI):
-    def __init__(self, endpoint=None, service=None, chat_mode=True):
-        super().__init__(model="gpt-4", chat_mode=chat_mode)
+    def __init__(self, endpoint=None, service=None, chat_mode=True, caching=False):
+        super().__init__(model="gpt-4", chat_mode=chat_mode, caching=caching)
         self.endpoint = endpoint
         self.service = service
         
